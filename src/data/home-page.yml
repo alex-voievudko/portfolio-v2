@@ -1,0 +1,28 @@
+page_id: home-page
+page_url: /
+title: Portfolio
+description: This is the home page of the portfolio. It is a static page that is generated from a YAML file.
+hero_section:
+  title: <span>Hi, my name is</span><span>Alex Voievudko</span>
+  subtitle: I am 
+  variants:
+    - a software engineer
+    - a web developer
+    - a lover of all things tech
+  background_image: ../assets/images/hero-image.jpeg
+  buttons:
+    - label: Download CV
+      url: /contact
+    - label: Visit Github
+      url: /projects
+  social_links:
+    - label: github
+      url: https://github.com/alex-voievudko
+    - label: linkedin
+      url: https://www.linkedin.com/in/alex-voievudko/
+    - label: instagram
+      url: https://www.instagram.com/alex_voievudko/
+    - label: telegram
+      url: https://t.me/alex_voievudko
+
+

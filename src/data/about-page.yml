@@ -1,0 +1,45 @@
+page_id: about-page
+page_url: /about
+title: About
+description: This is the about page of the portfolio. It is a static page that is generated from a YAML file.
+info_section:
+  image: ../assets/images/info-img.jpg
+  title: I'm Alex Voievudko, a software engineer based in Barcelona, Spain.
+  subtitle: Who am I?
+  description: I am a software engineer with a passion for web development. I have a strong background in computer science and I am always looking to learn new things. I am a team player and I love working with people who share my passion for technology.
+  detailed_info: 
+    name: Alex Voievudko
+    email: alex.voievudko@gmail.com
+    age: 33
+    location: Barcelona, Spain
+  button:
+    label: Download CV
+    url: /contact
+recommendations_section:
+  title: Testimonials
+  subtitle: What people say about me
+  recommendations:
+    - name: Kate Khait
+      profile_url: https://www.linkedin.com/in/kate-khait/
+      position: Director of Game Platforms, Product Manager at Plarium
+      meta_info: December 15, 2022, 🇺🇦 Kate managed Alex directly
+      image: ../assets/images/recommendation-1.jpeg
+      text: <p>When Alex joined our team he was assigned a huge project of plarium.com's overhaul, where we had to completely change the architecture of the platform, and moved to a more modern tech stack.</p>
+            <p>As a Project Manager, Alex was very tech-savvy, making him very respected among the developers' team.  He was always very attentive to details and followed up on crucial changes in time.</p>
+            <p>I recommend Alex as a very responsible employee, and I think that his management experience would be very helpful in any software development role that he chooses for himself.</p>
+    - name: Judith Hoffman
+      profile_url: https://www.linkedin.com/in/judithhoffman/
+      position: Experienced production executive and studio operations director
+      meta_info: September 6, 2022, Judith managed Alex directly
+      image: ../assets/images/recommendation-2.jpeg
+      text: <p>I worked with Alex at Tilting Point, where he was the lead for the Player XP (community and customer support) team. Alex was an excellent and organized staff manager, and was responsible for recruiting in more experienced people for the Community team.  Alex was responsible for migrating the TP games to a common Customer Support platform he took point on evaluating the systems and services offered, helped negotiate with the providers and managed the migration, which went smoothly with no customer facing disruption.  Alex also implemented regular reporting and tracking metrics to measure the quality of our Player XP offering.  He defined a set of graduated community offerings as part of a support package for TP's business development offering.</p>
+            <p>In summary, Smart, capable, well organized, technically adept, willing to dive into the details but also delegated well to his staff.</p>
+    - name: Olya Hladyk
+      profile_url: https://www.linkedin.com/in/olyahladyk/
+      position: LiveOps Specialist
+      meta_info: August 31, 2022, Olya reported directly to Alex
+      image: ../assets/images/recommendation-3.jpeg
+      text: <p>Alex is one of those rare people who are willing to go above and beyond in any project they create.</p>
+            <p>He is always very passionate about projects he creates or investigates, constantly learning and keeping up with new technologies.</p>
+            <p>I worked with Alex for more than 3 years, and through all this time he kept driving our team to higher and higher goals. He was the one who constantly brought in new ideas and solutions that would change any workflow or project for the better.</p>
+            <p>I highly recommend working with Alex, and I am 100% sure that his energy and hard work will bring any business to an entirely new level.</p>
