@@ -3,7 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 // @framer-motion
 import { motion } from 'framer-motion'
 
-export const Section = styled(motion.section)`
+export const Section = styled.section`
 	position: relative;
 	overflow: hidden;
 	display: flex;
@@ -89,6 +89,7 @@ export const ButtonsWrapper = styled(motion.div)`
 
 	@media ${({ theme }) => theme.breakpoints.md} {
 		flex-direction: row;
+		width: 41rem;
 	}
 `
 

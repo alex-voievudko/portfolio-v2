@@ -11,7 +11,7 @@ import { Button } from '@components/Button/Button'
 import { FiDownload, FiGithub } from 'react-icons/fi'
 import { SocialLinks } from '@components/SocialLinks/SocialLinks'
 // @animations
-import { stagger, fadeInUp, fadeInLeft } from '@animations'
+import { fadeInUp, fadeInLeft } from '@animations'
 
 type Data = {
 	allPages: {
@@ -72,7 +72,7 @@ export const HeroSection = () => {
 	const buttonGithub = buttons[1]
 
 	return (
-		<S.Section variants={stagger} initial='hidden' animate='show'>
+		<S.Section>
 			<S.Background image={backgroundImage} alt='hero-background' />
 			<Container fullHeight>
 				<S.Content>
