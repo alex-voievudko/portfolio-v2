@@ -1,0 +1,42 @@
+page_id: portfolio-page
+page_url: /portfolio
+title: Portfolio
+description: This is the portfolio page of the portfolio. It is a static page that is generated from a YAML file.
+projects_section:
+  projects:
+    - title: Project 1
+      description: This is the description of the project 1.
+      technologies:
+        - React
+        - TypeScript
+        - Redux
+        - Styled Components
+      video: ../assets/video/project-1.mp4
+      github: https://github.com/alex-voievudko/world-of-games-app
+      live: https://630373690c37ff00a8b2348c--world-of-games.netlify.app/
+
+    - title: Project 2
+      description: This is a budget app that lets you create custom categories and track your expenses with ease. With its simple and intuitive design, managing your finances has never been simpler. Start taking control of your money today.
+      technologies:
+        - React
+        - TypeScript
+        - Redux
+        - Styled Components
+      video: ../assets/video/project-1.mp4
+      github: https://github.com/alex-voievudko/budget-app
+      live: https://alex-voievudko.github.io/budget-app/
+
+    - title: Project 3
+      description: This is the description of the project 3.
+      technologies:
+        - React
+        - TypeScript
+        - Redux
+        - Styled Components
+      video: ../assets/video/project-1.mp4
+      github: null
+      live: https://careers.zeptolab.com/
+      
+      
+
+    
