@@ -7,6 +7,7 @@ type Props = {
 	as?: string | React.ComponentType<any>
 	href?: string
 	variant?: 'solid' | 'outline' | 'text'
+	isCardButton?: boolean
 	rightIcon?: JSX.Element
 	leftIcon?: JSX.Element
 	onClick?: MouseEventHandler<HTMLButtonElement>
@@ -20,9 +21,18 @@ export const Button = ({
 	onClick,
 	rightIcon,
 	leftIcon,
+	isCardButton,
 }: Props) => {
 	return (
-		<S.Button as={as} href={href} $variant={variant} onClick={onClick}>
+		<S.Button
+			as={as}
+			href={href}
+			$variant={variant}
+			$isCardButton={isCardButton}
+			onClick={onClick}
+			target='_blank'
+			rel='noopener noreferrer'
+		>
 			{leftIcon && leftIcon}
 			{children}
 			{rightIcon && rightIcon}

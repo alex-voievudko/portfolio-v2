@@ -13,14 +13,16 @@ type Props = {
 
 export const PageHeading = ({ title, description }: Props) => {
 	return (
-		<Container>
-			<S.Wrapper>
-				<S.Description variants={fadeInUp}>{description}</S.Description>
-				<S.TitleWrapper variants={fadeInUp}>
-					<S.Title>{title}</S.Title>
-					<S.AnimatedBar variants={width} initial='hidden' animate='show' />
-				</S.TitleWrapper>
-			</S.Wrapper>
-		</Container>
+		<S.Section>
+			<Container>
+				<S.Wrapper>
+					<S.Description variants={fadeInUp}>{description}</S.Description>
+					<S.TitleWrapper variants={fadeInUp}>
+						<S.Title>{title}</S.Title>
+						<S.AnimatedBar variants={width} initial='hidden' animate='show' />
+					</S.TitleWrapper>
+				</S.Wrapper>
+			</Container>
+		</S.Section>
 	)
 }

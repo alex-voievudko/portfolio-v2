@@ -3,6 +3,15 @@ import { Link } from 'gatsby'
 // @framer-motion
 import { motion } from 'framer-motion'
 
+const fadeIn: Keyframes = keyframes`
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+`
+
 export const Header = styled.header<{ $scrolled: boolean }>`
 	position: fixed;
 	top: 0;
@@ -85,7 +94,9 @@ export const NavList = styled.ul`
 	}
 `
 
-export const NavItem = styled.li``
+export const NavItem = styled.li`
+	width: 100%;
+`
 
 export const NavLink = styled(Link)`
 	position: relative;
@@ -111,16 +122,18 @@ export const NavLink = styled(Link)`
 		color: ${({ theme }) => theme.colors.white};
 
 		&::after {
+			opacity: 0;
 			content: '';
 			position: absolute;
-			right: -1.8rem;
+			right: 0;
 			top: 50%;
 			transform: translateY(-50%);
 			display: block;
 			width: 0.6rem;
 			height: 0.6rem;
 			background-color: ${({ theme }) => theme.colors.primary};
-			transition: all 0.3s ease-in-out;
+			animation: ${fadeIn} 0.3s ease-in-out forwards;
+			animation-delay: 0.5s;
 		}
 	}
 

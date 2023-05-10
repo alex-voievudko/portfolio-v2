@@ -11,6 +11,8 @@ const barAnimation: Keyframes = keyframes`
 		transform: translateX(8.4rem);
 	}
 `
+
+export const Section = styled.section``
 export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
