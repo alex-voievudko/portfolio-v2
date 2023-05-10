@@ -39,7 +39,7 @@ export const RecommendationsWrapper = styled(motion.div)`
 	grid-gap: 5rem;
 `
 
-export const CarouselWrapper = styled.div`
+export const CarouselWrapper = styled(motion.div)`
 	width: 100%;
 	padding-bottom: 4.8rem;
 

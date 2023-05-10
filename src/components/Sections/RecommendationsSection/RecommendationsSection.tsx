@@ -8,6 +8,8 @@ import * as S from './RecommendationsSection.styles'
 // @components
 import { Container } from '@components/Container/Container'
 import { Recommendation } from '@components/Recommendation/Recommendation'
+// @animations
+import { fadeInUp } from '@animations'
 
 type Data = {
 	allPages: {
@@ -76,37 +78,10 @@ export const RecommendationsSection = () => {
 		<S.Section>
 			<Container>
 				<S.Wrapper>
-					<S.Subtitle
-						viewport={{ once: true }}
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{
-							opacity: 1,
-							y: 0,
-							transition: {
-								duration: 0.8,
-								ease: 'easeInOut',
-							},
-						}}
-					>
-						{subtitle}
-					</S.Subtitle>
-					<S.Title
-						viewport={{ once: true }}
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{
-							opacity: 1,
-							y: 0,
-							transition: {
-								delay: 0.5,
-								duration: 0.8,
-								ease: 'easeInOut',
-							},
-						}}
-					>
-						{title}
-					</S.Title>
+					<S.Subtitle variants={fadeInUp}>{subtitle}</S.Subtitle>
+					<S.Title variants={fadeInUp}>{title}</S.Title>
 				</S.Wrapper>
-				<S.CarouselWrapper>
+				<S.CarouselWrapper variants={fadeInUp}>
 					<Carousel
 						autoplay={true}
 						wrapAround={true}
