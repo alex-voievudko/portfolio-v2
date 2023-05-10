@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { useMediaQuery } from 'react-responsive'
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import Carousel from 'nuka-carousel'
 // @styles
@@ -72,7 +72,8 @@ export const RecommendationsSection = () => {
 	const { title, subtitle, recommendations } =
 		data.allPages.edges[0].node.recommendations_section
 
-	const isMd = useMediaQuery({ query: '(min-width: 768px)' })
+	const breakpoints = useBreakpoint()
+	const isMd = breakpoints.md
 
 	return (
 		<S.Section>

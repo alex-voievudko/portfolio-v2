@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { useMediaQuery } from 'react-responsive'
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 // @styles
 import * as S from './Video.styles'
 
@@ -9,7 +9,8 @@ type Props = {
 
 export const Video = ({ source }: Props) => {
 	const videoRef = useRef<HTMLVideoElement>(null)
-	const isLaptop = useMediaQuery({ query: '(min-width: 992px)' })
+	const breakpoints = useBreakpoint()
+	const isLaptop = breakpoints.lg
 
 	const handleMouseEnter = () => {
 		if (videoRef.current) {
