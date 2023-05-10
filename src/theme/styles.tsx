@@ -14,6 +14,12 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.overlay};
   }
 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   html {
     background-color: ${({ theme }) => theme.colors.background};
     font-size: 62.5%;
