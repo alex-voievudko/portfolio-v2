@@ -49,6 +49,19 @@ const config: GatsbyConfig = {
 				},
 			},
 		},
+		{
+			resolve: `gatsby-plugin-google-gtag`,
+			options: {
+				trackingIds: [
+					'G-ZMW5MW4G4X', // Google Analytics / GA
+				],
+				gtagConfig: {
+					optimize_id: 'OPT_CONTAINER_ID',
+					anonymize_ip: true,
+					cookie_expires: 0,
+				},
+			},
+		},
 	],
 }
 
