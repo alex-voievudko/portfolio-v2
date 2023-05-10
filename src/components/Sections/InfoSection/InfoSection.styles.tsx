@@ -42,6 +42,12 @@ export const ImageWrapper = styled(motion.div)`
 	border: 0.8rem solid ${({ theme }) => theme.colors.overlay};
 	margin: 0 auto 3.2rem auto;
 	overflow: hidden;
+	z-index: 1;
+
+	.gatsby-image-wrapper {
+		position: relative;
+		z-index: 0;
+	}
 
 	@media ${({ theme }) => theme.breakpoints.md} {
 		height: 24rem;
