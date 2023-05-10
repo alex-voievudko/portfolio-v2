@@ -1,7 +1,11 @@
 import * as React from 'react'
-import type { HeadFC, PageProps } from 'gatsby'
+import type { HeadFC } from 'gatsby'
+// @framer-motion
+import { motion } from 'framer-motion'
 // @layouts
 import { Layout } from '@layouts'
+// @sections
+import { ProjectsSection } from '@components/Sections'
 // @components
 import { Container } from '@components/Container/Container'
 import { PageHeading } from '@components/PageHeading/PageHeading'
@@ -9,12 +13,11 @@ import { PageHeading } from '@components/PageHeading/PageHeading'
 const PortfolioPage = () => {
 	return (
 		<Layout>
-			<Container>
-				<PageHeading
-					title='Portfolio'
-					description='Here you can find some of my projects'
-				/>
-			</Container>
+			<PageHeading
+				title='Portfolio'
+				description='Here you can find some of my projects'
+			/>
+			<ProjectsSection />
 		</Layout>
 	)
 }

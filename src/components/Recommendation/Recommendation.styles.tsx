@@ -24,6 +24,7 @@ export const Grid = styled.div`
 		display: none;
 
 		@media ${({ theme }) => theme.breakpoints.md} {
+			display: block;
 			grid-column: 3 / 4;
 			grid-row: 1 / 2;
 			width: 4.8rem;
@@ -39,6 +40,7 @@ export const ImageWrapper = styled.div`
 	height: 5rem;
 	grid-column: 1 / 2;
 	border-radius: 50%;
+	border: 0.4rem solid rgba(255, 255, 255, 0.1);
 	overflow: hidden;
 	z-index: 1;
 
@@ -51,9 +53,9 @@ export const ImageWrapper = styled.div`
 export const MetadataWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: flex-start;
 	grid-column: 2 / 4;
+	min-height: 11rem;
 
 	@media ${({ theme }) => theme.breakpoints.md} {
 		padding-right: 1.4rem;
