@@ -63,6 +63,18 @@ const config: GatsbyConfig = {
 				},
 			},
 		},
+		{
+			resolve: 'gatsby-plugin-breakpoints',
+			options: {
+				queries: {
+					sm: '(min-width: 576px)',
+					md: '(min-width: 768px)',
+					lg: '(min-width: 992px)',
+					xl: '(min-width: 1200px)',
+					'2xl': '(min-width: 1400px)',
+				},
+			},
+		},
 	],
 }
 
