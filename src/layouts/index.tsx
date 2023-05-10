@@ -7,7 +7,7 @@ import { ThemeProvider } from '@theme'
 import { Header } from '@components/Header/Header'
 import { Overlay } from '@components/Overlay/Overlay'
 // @animations
-import { fadeIn } from '@animations'
+import { stagger } from '@animations'
 
 type LayoutProps = {
 	children: React.ReactNode
@@ -17,7 +17,7 @@ export const Layout = ({ children }: LayoutProps) => {
 	return (
 		<ThemeProvider>
 			<AnimatePresence>
-				<motion.div variants={fadeIn} initial='hidden' animate='visible'>
+				<motion.div variants={stagger} initial='hidden' animate='show'>
 					<Header />
 					<main>{children}</main>
 				</motion.div>
