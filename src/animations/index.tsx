@@ -1,27 +1,15 @@
 import { Variants, cubicBezier } from 'framer-motion'
 
-export const fadeIn: Variants = {
+export const stagger: Variants = {
 	hidden: {
 		opacity: 0,
 	},
-	visible: {
+	show: {
 		opacity: 1,
 		transition: {
 			delay: 0.5,
 			duration: 0.25,
 			ease: 'easeInOut',
-		},
-	},
-}
-
-export const stagger: Variants = {
-	hidden: {
-		opacity: 1,
-	},
-	show: {
-		opacity: 1,
-		transition: {
-			duration: 0,
 			delayChildren: 0.75,
 			staggerChildren: 0.5,
 		},
