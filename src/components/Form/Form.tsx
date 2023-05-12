@@ -1,11 +1,12 @@
 import React from 'react'
 
-import { useFormik } from 'formik'
+import { useFormik, FormikHelpers } from 'formik'
 import { useStaticQuery, graphql } from 'gatsby'
 import { FiSend } from 'react-icons/fi'
 import * as Yup from 'yup'
 
-import { Button } from '@components'
+import { Button, Toast } from '@components'
+import { sendMail } from '@utils'
 
 import * as S from './Form.styles'
 
@@ -73,8 +74,18 @@ export const Form = () => {
     message: '',
   }
 
-  const handleSubmit = (values: FormValues) => {
-    console.log(values)
+  const handleSubmit = async (values: FormValues, actions: FormikHelpers<FormValues>) => {
+    const { name, email, subject, message } = values
+    try {
+      await sendMail({ name, email, subject, message })
+      actions.setSubmitting(false)
+      actions.setStatus({ success: true })
+      actions.resetForm()
+    } catch (error) {
+      console.error(error)
+      actions.setSubmitting(false)
+      actions.setStatus({ success: false })
+    }
   }
 
   const formik = useFormik({
@@ -85,79 +96,86 @@ export const Form = () => {
     validateOnBlur: false,
   })
 
+  console.log(formik.status)
+
   return (
-    <S.Container>
-      <S.Title>{title}</S.Title>
-      <S.Subtitle>{subtitle}</S.Subtitle>
-      <S.Form onSubmit={formik.handleSubmit}>
-        {/* NAME */}
-        <S.InputContainer>
-          <S.Input
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Name"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.name}
-            $error={!!formik.touched.name && !!formik.errors.name}
-          />
-          {formik.touched.name && formik.errors.name ? <S.Error>{formik.errors.name}</S.Error> : null}
-        </S.InputContainer>
+    <>
+      <S.Container>
+        <S.Title>{title}</S.Title>
+        <S.Subtitle>{subtitle}</S.Subtitle>
+        <S.Form onSubmit={formik.handleSubmit}>
+          {/* NAME */}
+          <S.InputContainer>
+            <S.Input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Name"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+              $error={!!formik.touched.name && !!formik.errors.name}
+            />
+            {formik.touched.name && formik.errors.name ? <S.Error>{formik.errors.name}</S.Error> : null}
+          </S.InputContainer>
 
-        {/* EMAIL */}
-        <S.InputContainer>
-          <S.Input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Email"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.email}
-            $error={!!formik.touched.email && !!formik.errors.email}
-          />
-          {formik.touched.email && formik.errors.email ? <S.Error>{formik.errors.email}</S.Error> : null}
-        </S.InputContainer>
+          {/* EMAIL */}
+          <S.InputContainer>
+            <S.Input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+              $error={!!formik.touched.email && !!formik.errors.email}
+            />
+            {formik.touched.email && formik.errors.email ? <S.Error>{formik.errors.email}</S.Error> : null}
+          </S.InputContainer>
 
-        {/* SUBJECT */}
-        <S.InputContainer>
-          <S.Input
-            id="subject"
-            name="subject"
-            type="text"
-            placeholder="Subject"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.subject}
-            $error={!!formik.touched.subject && !!formik.errors.subject}
-          />
-          {formik.touched.subject && formik.errors.subject ? <S.Error>{formik.errors.subject}</S.Error> : null}
-        </S.InputContainer>
+          {/* SUBJECT */}
+          <S.InputContainer>
+            <S.Input
+              id="subject"
+              name="subject"
+              type="text"
+              placeholder="Subject"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.subject}
+              $error={!!formik.touched.subject && !!formik.errors.subject}
+            />
+            {formik.touched.subject && formik.errors.subject ? <S.Error>{formik.errors.subject}</S.Error> : null}
+          </S.InputContainer>
 
-        {/* MESSAGE */}
-        <S.InputContainer>
-          <S.TextArea
-            id="message"
-            name="message"
-            placeholder="Message"
-            rows={5}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.message}
-            $error={!!formik.touched.message && !!formik.errors.message}
-          />
-          {formik.touched.message && formik.errors.message ? <S.Error>{formik.errors.message}</S.Error> : null}
-        </S.InputContainer>
+          {/* MESSAGE */}
+          <S.InputContainer>
+            <S.TextArea
+              id="message"
+              name="message"
+              placeholder="Message"
+              rows={5}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+              $error={!!formik.touched.message && !!formik.errors.message}
+            />
+            {formik.touched.message && formik.errors.message ? <S.Error>{formik.errors.message}</S.Error> : null}
+          </S.InputContainer>
 
-        {/* SUBMIT */}
+          {/* SUBMIT */}
 
-        <S.ButtonWrapper>
-          <Button variant="solid" as="button" type="submit" disabled={formik.isSubmitting} rightIcon={<FiSend />}>
-            {button_lable}
-          </Button>
-        </S.ButtonWrapper>
-      </S.Form>
-    </S.Container>
+          <S.ButtonWrapper>
+            <Button variant="solid" as="button" type="submit" disabled={formik.isSubmitting} rightIcon={<FiSend />}>
+              {button_lable}
+            </Button>
+          </S.ButtonWrapper>
+        </S.Form>
+      </S.Container>
+
+      {/* TOAST */}
+      {/* <Toast variant={toastVariant} show={showToast} /> */}
+    </>
   )
 }

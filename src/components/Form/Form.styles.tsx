@@ -37,7 +37,8 @@ export const Input = styled.input<{ $error: boolean }>`
   border: none;
   border-bottom: 1px solid ${({ $error, theme }) => ($error ? theme.colors.error : '#777777')};
   border-radius: 0;
-  color: #777777;
+  color: ${({ theme }) => theme.colors.white};
+  caret-color: ${({ theme }) => theme.colors.primary};
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
@@ -50,6 +51,23 @@ export const Input = styled.input<{ $error: boolean }>`
     border: none;
     border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
   }
+
+  &::placeholder {
+    color: #777777;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    background-color: #161616;
+    color: ${({ theme }) => theme.colors.white};
+    -webkit-text-fill-color: ${({ theme }) => theme.colors.white};
+    -webkit-box-shadow: 0 0 0px 1000px #161616 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 `
 
 export const TextArea = styled.textarea<{ $error: boolean }>`
@@ -59,7 +77,8 @@ export const TextArea = styled.textarea<{ $error: boolean }>`
   border: none;
   border-bottom: 1px solid ${({ $error, theme }) => ($error ? theme.colors.error : '#777777')};
   border-radius: 0;
-  color: #777777;
+  color: ${({ theme }) => theme.colors.white};
+  caret-color: ${({ theme }) => theme.colors.primary};
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
