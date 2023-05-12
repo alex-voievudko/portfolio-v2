@@ -31,7 +31,7 @@ export const Recommendation = ({ recommendation }: Props) => {
     <S.Container>
       <S.Grid>
         <S.ImageWrapper>
-          <GatsbyImage image={image} alt={name} />
+          <GatsbyImage image={image} alt={name} loading="eager" />
         </S.ImageWrapper>
         <S.MetadataWrapper>
           <S.Name>
