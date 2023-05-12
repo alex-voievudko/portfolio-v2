@@ -20,6 +20,7 @@ declare module 'styled-components' {
       primaryHover: string
       cardTitle: string
       error: string
+      success: string
     }
   }
 }

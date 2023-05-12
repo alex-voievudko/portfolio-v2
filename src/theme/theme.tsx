@@ -19,5 +19,6 @@ export const theme: DefaultTheme = {
     primaryHover: '#7733DE',
     cardTitle: '#f3f3f3',
     error: '#ff0000',
+    success: '#009e66',
   },
 }
