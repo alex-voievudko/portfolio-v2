@@ -13,7 +13,7 @@ type LayoutProps = {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <ThemeProvider>
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <motion.div variants={stagger} initial="hidden" animate="show" exit="exit">
           <Header />
           <main>{children}</main>
