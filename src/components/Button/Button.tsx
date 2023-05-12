@@ -29,6 +29,7 @@ export const Button = ({
   leftIcon,
   isCardButton,
   disabled,
+  type,
 }: Props) => {
   return (
     <S.Button
@@ -38,6 +39,7 @@ export const Button = ({
       $isCardButton={isCardButton}
       disabled={disabled}
       onClick={onClick}
+      {...(type && { type })}
       {...(as === 'a' && { target: '_blank', rel: 'noopener noreferrer' })}
     >
       {leftIcon && leftIcon}
