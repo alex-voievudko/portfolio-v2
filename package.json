@@ -24,6 +24,7 @@
     "@fontsource/poppins": "^4.5.10",
     "axios": "^1.4.0",
     "babel-plugin-styled-components": "^2.1.1",
+    "deepmerge": "^4.3.1",
     "formik": "^2.2.9",
     "framer-motion": "^10.12.8",
     "gatsby": "^5.9.0",
