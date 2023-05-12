@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 
 import * as S from './Header.styles'
@@ -11,16 +10,6 @@ import * as S from './Header.styles'
 type Link = {
   name: string
   to: string
-}
-
-type Data = {
-  allImageSharp: {
-    edges: {
-      node: {
-        gatsbyImageData: IGatsbyImageData
-      }
-    }[]
-  }
 }
 
 // -------------------------------------------------------------
@@ -48,19 +37,6 @@ const links: Link[] = [
 // -------------------------------------------------------------
 
 export const Header = () => {
-  const data: Data = useStaticQuery(graphql`
-    query {
-      allImageSharp(filter: { id: { eq: "bf824060-d095-5300-8a3f-b637c3f26dd8" } }) {
-        edges {
-          node {
-            gatsbyImageData(height: 100, width: 100, layout: CONSTRAINED, placeholder: NONE, formats: AUTO)
-          }
-        }
-      }
-    }
-  `)
-  const image = getImage(data.allImageSharp.edges[0].node.gatsbyImageData) as IGatsbyImageData
-
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -81,7 +57,7 @@ export const Header = () => {
     <S.Header $scrolled={isScrolled}>
       <S.Logo to="/">
         <S.LogoImageWrapper>
-          <GatsbyImage image={image} alt="logo" />
+          <StaticImage src="../../assets/images/logo.png" alt="Logo" placeholder="none" formats={['auto']} />
         </S.LogoImageWrapper>
       </S.Logo>
       <S.MobileButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
