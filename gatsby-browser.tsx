@@ -7,7 +7,6 @@ import React from 'react'
 
 import { AnimatePresence } from 'framer-motion'
 import type { GatsbyBrowser } from 'gatsby'
-// @framer-motion
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) => {
   return (
