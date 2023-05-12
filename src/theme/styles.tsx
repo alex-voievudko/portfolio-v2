@@ -36,11 +36,5 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.95;
     overflow: hidden;
     scroll-behavior: smooth;
-    
   }
-
-  
-
-  
-
   `

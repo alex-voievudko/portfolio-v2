@@ -1,0 +1,29 @@
+page_id: contact-page
+page_url: /contact
+title: Contact Me
+description: This is the contact page of the portfolio. It is a static page that is generated from a YAML file.
+contact_section:
+  form:
+    title: Message Me
+    subtitle: Feel free to drop me a line below!
+    button_lable: Send Message
+  contact_info:
+    title: Contact Info
+    subtitle: You can contact me through any of the following channels
+    info_items:
+      - icon_name: fa-map-marker-alt
+        title: Name
+        value: Alex Voievudko
+      - icon_name: fa-map-marker-alt
+        title: Location
+        value: Barcelona, Spain
+      - icon_name: fa-envelope
+        title: Email
+        value: alex.voievudko@gmail.com
+      - icon_name: fa-phone
+        title: Telegram
+        value: '@alexvoievudko'
+      - icon_name: fa-linkedin
+        title: LinkedIn
+        value: https://www.linkedin.com/in/alex-voievudko/
+      

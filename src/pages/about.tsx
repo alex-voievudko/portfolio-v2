@@ -1,26 +1,56 @@
 import * as React from 'react'
+
 import type { HeadFC } from 'gatsby'
-// @framer-motion
-import { motion } from 'framer-motion'
-// @layouts
+import { graphql } from 'gatsby'
+
+import { PageHeading, Seo } from '@components'
 import { Layout } from '@layouts'
-// @sections
-import { InfoSection } from '@components/Sections'
-import { RecommendationsSection } from '@components/Sections'
-// @components
-import { Container } from '@components/Container/Container'
-import { PageHeading } from '@components/PageHeading/PageHeading'
+import { InfoSection, RecommendationsSection } from '@sections'
+
+type Data = {
+  allPages: {
+    edges: {
+      node: {
+        title: string
+        description: string
+        page_url: string
+      }
+    }[]
+  }
+}
 
 const AboutPage = () => {
-	return (
-		<Layout>
-			<PageHeading title='About Me' description='Get to know me' />
-			<InfoSection />
-			<RecommendationsSection />
-		</Layout>
-	)
+  return (
+    <Layout>
+      <PageHeading title="About Me" description="Get to know me" />
+      <InfoSection />
+      <RecommendationsSection />
+    </Layout>
+  )
 }
 
 export default AboutPage
 
-export const Head: HeadFC = () => <title>About Page</title>
+// Page Query
+export const query = graphql`
+  query {
+    allPages(filter: { page_id: { eq: "about-page" } }) {
+      edges {
+        node {
+          title
+          description
+          page_url
+        }
+      }
+    }
+  }
+`
+
+export const Head: HeadFC<Data> = ({ data }) => {
+  const { title, description, page_url } = data.allPages.edges[0].node
+  return (
+    <>
+      <Seo title={title} description={description} pathname={page_url} />
+    </>
+  )
+}

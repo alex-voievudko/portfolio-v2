@@ -1,28 +1,26 @@
 import React from 'react'
-//@framer-motion
+
 import { motion, AnimatePresence } from 'framer-motion'
-// @custom theme
-import { ThemeProvider } from '@theme'
-// @components
-import { Header } from '@components/Header/Header'
-import { Overlay } from '@components/Overlay/Overlay'
-// @animations
+
 import { stagger } from '@animations'
+import { Header, Overlay, ScrollToTop } from '@components'
+import { ThemeProvider } from '@theme'
 
 type LayoutProps = {
-	children: React.ReactNode
+  children: React.ReactNode
 }
 
 export const Layout = ({ children }: LayoutProps) => {
-	return (
-		<ThemeProvider>
-			<AnimatePresence>
-				<motion.div variants={stagger} initial='hidden' animate='show'>
-					<Header />
-					<main>{children}</main>
-				</motion.div>
-			</AnimatePresence>
-			<Overlay />
-		</ThemeProvider>
-	)
+  return (
+    <ThemeProvider>
+      <AnimatePresence mode="wait">
+        <motion.div variants={stagger} initial="hidden" animate="show" exit="exit">
+          <Header />
+          <main>{children}</main>
+          <ScrollToTop offset={250} />
+        </motion.div>
+      </AnimatePresence>
+      <Overlay />
+    </ThemeProvider>
+  )
 }

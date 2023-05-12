@@ -1,21 +1,53 @@
 import * as React from 'react'
-import type { HeadFC, PageProps } from 'gatsby'
-// @layouts
+
+import type { HeadFC } from 'gatsby'
+import { graphql } from 'gatsby'
+
+import { PageHeading, Seo } from '@components'
 import { Layout } from '@layouts'
-// @components
-import { Container } from '@components/Container/Container'
-import { PageHeading } from '@components/PageHeading/PageHeading'
+
+type Data = {
+  allPages: {
+    edges: {
+      node: {
+        title: string
+        description: string
+        page_url: string
+      }
+    }[]
+  }
+}
 
 const ResumePage = () => {
-	return (
-		<Layout>
-			<Container>
-				<PageHeading title='Resume' description='My professional journey' />
-			</Container>
-		</Layout>
-	)
+  return (
+    <Layout>
+      <PageHeading title="Resume" description="My professional journey" />
+    </Layout>
+  )
 }
 
 export default ResumePage
 
-export const Head: HeadFC = () => <title>Resume Page</title>
+// Page Query
+export const query = graphql`
+  query {
+    allPages(filter: { page_id: { eq: "portfolio-page" } }) {
+      edges {
+        node {
+          title
+          description
+          page_url
+        }
+      }
+    }
+  }
+`
+
+export const Head: HeadFC<Data> = ({ data }) => {
+  const { title, description, page_url } = data.allPages.edges[0].node
+  return (
+    <>
+      <Seo title={title} description={description} pathname={page_url} />
+    </>
+  )
+}

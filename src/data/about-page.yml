@@ -1,6 +1,6 @@
 page_id: about-page
 page_url: /about
-title: About
+title: About Me
 description: This is the about page of the portfolio. It is a static page that is generated from a YAML file.
 info_section:
   image: ../assets/images/info-img.jpg
