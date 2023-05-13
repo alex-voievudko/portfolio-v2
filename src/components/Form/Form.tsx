@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { useFormik, FormikHelpers } from 'formik'
 import { useStaticQuery, graphql } from 'gatsby'
@@ -74,17 +74,33 @@ export const Form = () => {
     message: '',
   }
 
+  // STATE
+  const [showToast, setShowToast] = useState(false)
+  const [toastStatus, setStatus] = useState({
+    success: false,
+    message: '',
+  })
+
   const handleSubmit = async (values: FormValues, actions: FormikHelpers<FormValues>) => {
     const { name, email, subject, message } = values
     try {
       await sendMail({ name, email, subject, message })
+      setStatus({
+        success: true,
+        message: 'Your message has been sent successfully',
+      })
+      setShowToast(true)
+      setTimeout(() => setShowToast(false), 3000)
       actions.setSubmitting(false)
-      actions.setStatus({ success: true })
       actions.resetForm()
     } catch (error) {
-      console.error(error)
+      setStatus({
+        success: false,
+        message: 'Something went wrong, please try again',
+      })
+      setShowToast(true)
+      setTimeout(() => setShowToast(false), 3000)
       actions.setSubmitting(false)
-      actions.setStatus({ success: false })
     }
   }
 
@@ -175,7 +191,7 @@ export const Form = () => {
       </S.Container>
 
       {/* TOAST */}
-      {/* <Toast variant={toastVariant} show={showToast} /> */}
+      <Toast show={showToast} success={toastStatus.success} message={toastStatus.message} />
     </>
   )
 }
