@@ -45,6 +45,5 @@ export const Container = styled(motion.button)`
     width: 2.4rem;
     height: 2.4rem;
     color: ${({ theme }) => theme.colors.white};
-    stroke-width: 3px;
   }
 `

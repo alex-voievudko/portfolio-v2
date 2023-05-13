@@ -1,4 +1,5 @@
 export * from './Button/Button'
+export * from './Contacts/Contacts'
 export * from './Container/Container'
 export * from './Form/Form'
 export * from './Header/Header'
