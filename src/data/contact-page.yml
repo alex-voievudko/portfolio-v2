@@ -9,21 +9,26 @@ contact_section:
     button_lable: Send Message
   contact_info:
     title: Contact Info
-    subtitle: You can contact me through any of the following channels
+    subtitle: "You may reach me via these channels:"
     info_items:
-      - icon_name: fa-map-marker-alt
+      - icon_name: user
         title: Name
         value: Alex Voievudko
-      - icon_name: fa-map-marker-alt
+        link: null
+      - icon_name: location
         title: Location
         value: Barcelona, Spain
-      - icon_name: fa-envelope
+        link: null
+      - icon_name: email
         title: Email
         value: alex.voievudko@gmail.com
-      - icon_name: fa-phone
-        title: Telegram
-        value: '@alexvoievudko'
-      - icon_name: fa-linkedin
+        link: "mailto:alex.voievudko@gmail.com"
+      - icon_name: linkedin
         title: LinkedIn
         value: https://www.linkedin.com/in/alex-voievudko/
+        link: "https://www.linkedin.com/in/alex-voievudko/"
+      - icon_name: telegram
+        title: Telegram
+        value: '@alex_voievudko'
+        link: "https://t.me/alex_voievudko"
       

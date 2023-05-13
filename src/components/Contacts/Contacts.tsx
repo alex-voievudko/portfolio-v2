@@ -2,6 +2,10 @@ import React from 'react'
 
 import { useStaticQuery, graphql } from 'gatsby'
 
+import { getIcons } from '@utils'
+
+import * as S from './Contacts.styles'
+
 // -------------------------------------------------------------
 
 type Data = {
@@ -16,6 +20,7 @@ type Data = {
               title: string
               value: string
               icon_name: string
+              link: string | null
             }[]
           }
         }
@@ -40,6 +45,7 @@ export const Contacts = () => {
                   title
                   value
                   icon_name
+                  link
                 }
               }
             }
@@ -51,5 +57,28 @@ export const Contacts = () => {
 
   const { title, subtitle, info_items } = data.allPages.edges[0].node.contact_section.contact_info
 
-  return <div>Contacts</div>
+  return (
+    <S.Container>
+      <S.Title>{title}</S.Title>
+      <S.Subtitle>{subtitle}</S.Subtitle>
+      {info_items.map((item, index) => {
+        const { title, value, icon_name, link } = item
+        return (
+          <S.InfoItem key={title}>
+            <S.Icon>{getIcons(icon_name)}</S.Icon>
+            <S.Info>
+              <S.InfoTitle>{title}</S.InfoTitle>
+              {link ? (
+                <S.InfoValue>
+                  <a href={link}>{value}</a>
+                </S.InfoValue>
+              ) : (
+                <S.InfoValue>{value}</S.InfoValue>
+              )}
+            </S.Info>
+          </S.InfoItem>
+        )
+      })}
+    </S.Container>
+  )
 }
