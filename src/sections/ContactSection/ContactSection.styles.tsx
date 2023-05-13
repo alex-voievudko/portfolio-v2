@@ -11,9 +11,11 @@ export const Section = styled.section`
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  gap: 4.2rem;
 
-  @media ${({ theme }) => theme.breakpoints.md} {
+  @media ${({ theme }) => theme.breakpoints.lg} {
     grid-template-columns: repeat(2, 1fr);
+    gap: 4.8rem;
   }
 `
 

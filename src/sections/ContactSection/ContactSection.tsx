@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Container, Form } from '@components'
+import { fadeInFromLeft100, fadeInFromRight100 } from '@animations'
+import { Container, Form, Contacts } from '@components'
 
 import * as S from './ContactSection.styles'
 
@@ -11,10 +12,12 @@ export const ContactSection = () => {
     <S.Section>
       <Container>
         <S.Wrapper>
-          <S.FormWrapper>
+          <S.FormWrapper variants={fadeInFromLeft100}>
             <Form />
           </S.FormWrapper>
-          <S.ContentWrapper></S.ContentWrapper>
+          <S.ContentWrapper variants={fadeInFromRight100}>
+            <Contacts />
+          </S.ContentWrapper>
         </S.Wrapper>
       </Container>
     </S.Section>
