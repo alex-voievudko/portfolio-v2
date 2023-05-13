@@ -21,7 +21,6 @@ const instance = axios.create({
   baseURL: process.env.GATSBY_MAIL_API_URL,
   headers: {
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
   },
 })
 
