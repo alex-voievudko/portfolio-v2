@@ -144,3 +144,33 @@ export const toTopButtonIcon: Variants = {
     },
   },
 }
+
+export const fadeInFromLeft100: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -20,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.75,
+      ease: 'easeInOut',
+    },
+  },
+}
+
+export const fadeInFromRight100: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 20,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.75,
+      ease: 'easeInOut',
+    },
+  },
+}
