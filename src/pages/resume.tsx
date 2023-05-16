@@ -5,6 +5,9 @@ import { graphql } from 'gatsby'
 
 import { PageHeading, Seo } from '@components'
 import { Layout } from '@layouts'
+import { ExperienceSection, SkillsSection } from '@sections'
+
+// -------------------------------------------------------------
 
 type Data = {
   allPages: {
@@ -18,10 +21,14 @@ type Data = {
   }
 }
 
+// -------------------------------------------------------------
+
 const ResumePage = () => {
   return (
     <Layout>
       <PageHeading title="Resume" description="My professional journey" />
+      <ExperienceSection />
+      <SkillsSection />
     </Layout>
   )
 }
