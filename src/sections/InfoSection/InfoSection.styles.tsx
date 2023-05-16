@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints.lg} {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
-    align-items: center;
+    align-items: flex-start;
     gap: 3.2rem;
   }
 
@@ -57,7 +57,7 @@ export const ImageWrapper = styled(motion.div)`
   @media ${({ theme }) => theme.breakpoints.lg} {
     height: 44rem;
     width: auto;
-    margin: 0 0 0 0;
+    margin: 5.4rem 0 0 0;
     border-radius: 0;
     border: none;
   }
@@ -66,6 +66,16 @@ export const ImageWrapper = styled(motion.div)`
     height: 52rem;
     width: 43rem;
   }
+`
+
+export const Overlay = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.primary};
+  z-index: 1;
 `
 
 export const ContentWrapper = styled(motion.div)`
@@ -93,6 +103,10 @@ export const Description = styled.p`
   line-height: 1.95;
   text-align: left;
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+
+  p {
+    margin-bottom: 1.2rem;
+  }
 
   @media ${({ theme }) => theme.breakpoints.lg} {
     padding-bottom: 2rem;

@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import { FiDownload } from 'react-icons/fi'
 
-import { revile, fadeInUp } from '@animations'
+import { imageScale, reveal, fadeInUp } from '@animations'
 import { Button, Container, SocialLinks } from '@components'
 
 import * as S from './InfoSection.styles'
@@ -78,23 +78,20 @@ export const InfoSection = () => {
   const { title, subtitle, description, image, detailed_info, button } = data.allPages.edges[0].node.info_section
   const photo = getImage(image) as IGatsbyImageData
 
-  // @animations
-  const { scrollYProgress } = useScroll()
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.1])
-
   return (
     <S.Section>
       <Container>
         <S.Wrapper>
           <S.ImageWrapper>
-            <motion.div variants={revile} style={{ overflow: 'hidden', scale }}>
+            <motion.div variants={imageScale} style={{ overflow: 'hidden' }}>
               <GatsbyImage image={photo} alt={title} />
             </motion.div>
+            <S.Overlay variants={reveal} />
           </S.ImageWrapper>
           <S.ContentWrapper variants={fadeInUp}>
             <S.Subtitle>{subtitle}</S.Subtitle>
             <S.Title>{title}</S.Title>
-            <S.Description>{description}</S.Description>
+            <S.Description dangerouslySetInnerHTML={{ __html: description }}></S.Description>
             <S.ContactInfo>
               {/* Name */}
               <S.ContactInfoItem>
@@ -104,7 +101,12 @@ export const InfoSection = () => {
               {/* Email */}
               <S.ContactInfoItem>
                 <S.ContactInfoLabel>Email:</S.ContactInfoLabel>
-                <Button variant="text" href="mailto: {detailed_info.email}">
+                <Button
+                  variant="text"
+                  href={`
+                  mailto:${detailed_info.email}
+                `}
+                >
                   {detailed_info.email}
                 </Button>
               </S.ContactInfoItem>
