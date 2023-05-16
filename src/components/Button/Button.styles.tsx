@@ -26,7 +26,7 @@ export const Button = styled.a<Props>`
   transition: all 0.3s ease-in-out;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
-  flex: 1 1 0;
+  flex: ${({ $variant }) => ($variant === 'text' ? '0 0 auto' : '1 1 0')};
 
   ${({ $variant, disabled, theme }) => {
     switch ($variant) {
