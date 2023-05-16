@@ -10,7 +10,7 @@ export const stagger: Variants = {
       duration: 0.25,
       ease: 'easeInOut',
       delayChildren: 0.75,
-      staggerChildren: 0.5,
+      staggerChildren: 0.3,
     },
   },
   exit: {
@@ -96,18 +96,34 @@ export const zoomOut: Variants = {
   },
 }
 
-const ease = cubicBezier(0.77, 0, 0.175, 1)
-export const revile: Variants = {
+export const imageScale: Variants = {
   hidden: {
-    opacity: 0,
-    clipPath: 'polygon(0 0,0% 0,0% 100%,0 100%)',
+    display: 'none',
+    scale: 1.25,
   },
   show: {
-    opacity: 1,
-    clipPath: 'polygon(0 0,100% 0,100% 100%,0 100%)',
+    display: 'block',
+    scale: 1,
     transition: {
-      duration: 0.75,
-      easings: ease,
+      delay: 2.25,
+      duration: 1,
+      // ease: 'easeInOut',
+    },
+  },
+}
+
+export const reveal: Variants = {
+  hidden: {
+    scaleX: 0,
+    originX: 0,
+  },
+  show: {
+    scaleX: [0, 1, 1, 0],
+    originX: [0, 0, 1, 1],
+    transition: {
+      duration: 1.25,
+      times: [0, 0.4, 0.6, 1],
+      ease: cubicBezier(0.645, 0.045, 0.355, 1),
     },
   },
 }
@@ -173,4 +189,32 @@ export const fadeInFromRight100: Variants = {
       ease: 'easeInOut',
     },
   },
+}
+
+export const fadeInX: Variants = {
+  hidden: (i: number) => ({
+    opacity: 0,
+    x: i % 2 === 0 ? -20 : 20,
+  }),
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.75,
+      ease: 'easeInOut',
+    },
+  },
+}
+
+export const skillItem: Variants = {
+  hidden: {
+    width: 0,
+  },
+  show: (width: number) => ({
+    width: `${width}%`,
+    transition: {
+      duration: 0.75,
+      ease: 'easeInOut',
+    },
+  }),
 }
