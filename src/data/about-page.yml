@@ -6,7 +6,11 @@ info_section:
   image: ../assets/images/info-img.jpg
   title: I'm Alex Voievudko, a software engineer based in Barcelona, Spain.
   subtitle: Who am I?
-  description: I am a software engineer with a passion for web development. I have a strong background in computer science and I am always looking to learn new things. I am a team player and I love working with people who share my passion for technology.
+  description: <p>Welcome to my portfolio website! I'm an experienced Frontend and Fullstack TypeScript Developer with a strong passion for creating high-quality, responsive, and user-friendly applications. With over 5 years of hands-on experience working with React and other Node.js technologies as a hobby, I bring a wealth of knowledge and expertise to every project.</p>
+               <p>In my professional career, I have gained 8+ months of valuable commercial experience, honing my skills and staying up to date with the latest industry trends. My technical toolkit includes TypeScript, React, Node.js, Nest.js, Express, and GraphQL, enabling me to deliver robust and scalable solutions.</p>
+               <p>Beyond my technical prowess, I have also spent nearly 2 years as a project manager, ensuring smooth project execution and timely delivery. Additionally, I have over 6 years of experience as a team leader, successfully managing and leading teams of varying sizes, with up to 50 people.</p>
+               <p>I'm excited to collaborate on challenging projects and contribute my expertise to your team. Feel free to explore my portfolio and get in touch with me to discuss your ideas. Together, we can create remarkable digital experiences.</p>
+               
   detailed_info: 
     name: Alex Voievudko
     email: alex.voievudko@gmail.com
