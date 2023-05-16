@@ -10,6 +10,7 @@ export const Container = styled(motion.div)`
   gap: 2rem;
   background-color: #161616;
   padding: 2rem;
+  border-radius: 0.2rem;
 `
 
 export const Content = styled.div`

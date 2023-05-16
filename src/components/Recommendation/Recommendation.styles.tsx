@@ -8,6 +8,7 @@ export const Container = styled.div`
   align-items: flex-start;
   padding: 2.4rem;
   background-color: #161616;
+  border-radius: 0.2rem;
   height: 100%;
 
   @media ${({ theme }) => theme.breakpoints.md} {
