@@ -8,6 +8,17 @@ import React from 'react'
 import { AnimatePresence } from 'framer-motion'
 import type { GatsbyBrowser } from 'gatsby'
 
+export const onInitialClientRender: GatsbyBrowser['onInitialClientRender'] = () => {
+  const loader = document.getElementById('loader')
+
+  if (loader) {
+    loader.classList.add('active')
+    setTimeout(() => {
+      loader.classList.remove('active')
+    }, 750)
+  }
+}
+
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) => {
   return (
     <AnimatePresence mode="wait" initial={false}>
