@@ -1,0 +1,135 @@
+page_id: resume-page
+page_url: /resume
+title: Resume
+description: This is the resume page of the portfolio. It is a static page that is generated from a YAML file.
+experience_section:
+  experience_title: Experience
+  experience:
+    - title: Junior Frontend Developer
+      company: ZeptoLab
+      location: Barcelona, Spain
+      start_date: October 2022
+      end_date: Present
+      description: 
+        - Developed an internal tool to track Google Play and App Store ratings, as well as crash/ANR rates, using Nestjs, Postgres, Prisma, and React (all fully typed with TypeScript).
+        - Built and launched careers.zeptolab.com, a new website for job openings, using Gatsbyjs and styled-components (also in TypeScript), enhancing the candidate experience and streamlining the hiring process.
+        - Currently developing internal tools for the Player XP and other teams using TypeScript, React, Redux, GrapQL, Nest.js, Material UI, Chakra UI, improving teams productivity and enabling data-driven decision-making.
+        - Leveraging front-end expertise to deliver high-quality, scalable solutions, from conception to deployment, while ensuring a seamless user experience and adherence to best practices.
+        - Collaborating with cross-functional teams, including UX/UI designers, back-end developers, and product owners, to deliver cutting-edge solutions that meet business objectives and exceed user expectations.
+        - Staying up-to-date with industry trends and emerging technologies, continuously learning and improving technical skills to drive innovation and achieve success.
+    - title: Player XP Team Lead
+      company: Tilting Point
+      location: Barcelona, Spain
+      start_date: December 2020
+      end_date: July 2022
+      description:
+        - Built and led high-performing teams, delivering exceptional player experiences.
+        - Aligned team goals with business objectives and industry best practices.
+        - Communicated clear goals, conducted annual reviews, and fostered a high-performance culture.
+        - Monitored day-to-day operations, ensuring timely and high-quality service delivery.
+        - Mentored new team members and drove team success.
+        - Implemented technology and automation, resulting in cost savings and improved player satisfaction.
+        - Fostered positive relationships and promoted innovation, teamwork, and continuous improvement.
+    - title: Project Manager
+      company: Plarium
+      location: Kharkiv, Ukraine
+      start_date: August 2019
+      end_date: December 2020
+      description:
+        - Led ChatBot project to improve Customer Support productivity.
+        - Implemented machine learning tool for Google Play reviews, increasing processed reviews by 66%.
+        - Coordinated plarium.com development projects across teams.
+        - Created and managed project timelines within budget.
+        - Gathered project requirements with stakeholders.
+        - Established optimized work schedules using agile methodologies.
+        - Collaborated with internal associates and departments.
+        - Generated productivity reports to guide decision-making.
+
+    - title: Community Management General Lead
+      company: Plarium
+      location: Kharkiv, Ukraine
+      start_date: December 2018
+      end_date: August 2019
+      description:
+        - Assisted the director in leading and managing a team of 53 members, promoting collaboration and teamwork.
+        - Improved team processes, increasing productivity, efficiency, and customer satisfaction.
+        - Developed and implemented strategic plans for department growth and success.
+        - Set and communicated short-term and long-term team goals, fostering a high-performance culture.
+        - Ensured teams had necessary technical resources and tools for high-quality service delivery.
+        - Provided regular reports and analysis on departmental performance to facilitate data-driven decision-making.
+    - title: Senior Customer Support Team Lead
+      location: Lviv, Ukraine
+      company: Plarium
+      start_date: October 2015
+      end_date: December 2018
+      description:
+        - Led and coached three Team Leads, driving a culture of excellence and collaboration.
+        - Analyzed data to identify strategies for improving service and productivity, implementing improvements.
+        - Implemented new help desk system and internal tools, improving efficiency and customer satisfaction.
+        - Integrated help desk system to multiple game titles, providing instant support for players.
+        - Automated routine tasks to increase team productivity and reduce workload.
+        - Established a knowledge base to decrease ticket volume and improve response times.
+    - title: Customer Support Team Lead
+      location: Lviv, Ukraine
+      company: Plarium
+      start_date: April 2014
+      end_date: October 2015
+      description:
+        - Hired and managed a team of 20 customer service agents, fostering a culture of excellence and teamwork.
+        - Planned, assigned, and monitored work tasks for optimal team efficiency, ensuring timely and high-quality service delivery.
+        - Conducted monthly staff performance evaluations, identifying and addressing development needs to drive team success.
+        - Developed staff training programs and reference manuals, ensuring consistent standards and customer service levels.
+        - Formulated and implemented customer service policies and procedures, improving overall customer satisfaction.
+        - Resolved escalated customer service issues, ensuring positive outcomes and maintaining customer loyalty.
+skills_section:
+  title: My Skills
+  subtitle: My knowledge in some technologies and tools
+  skills:
+    - name: HTML
+      icon: '../assets/icons/html5.svg'
+    - name: CSS
+      icon: '../assets/icons/css.svg'
+    - name: JavaScript
+      icon: '../assets/icons/javascript.svg'
+    - name: TypeScript
+      icon: '../assets/icons/typescript.svg'
+    - name: React
+      icon: '../assets/icons/react.svg'
+    - name: GatsbyJs
+      icon: '../assets/icons/gatsby.svg'
+    - name: Next.js
+      icon: '../assets/icons/nextjs.svg'
+    - name: Redux
+      icon: '../assets/icons/redux.svg'
+    - name: Material UI
+      icon: '../assets/icons/materialui.svg'
+    - name: Chakra UI
+      icon: '../assets/icons/chakraui.svg'
+    - name: Tailwind CSS
+      icon: '../assets/icons/tailwindcss.svg'
+    - name: Styled Components
+      icon: '../assets/icons/styledcomponents.svg'
+    - name: Node.js
+      icon: '../assets/icons/nodejs.svg'
+    - name: Express.js
+      icon: '../assets/icons/express.svg'
+    - name: Nest.js
+      icon: '../assets/icons/nestjs.svg'
+    - name: Prisma
+      icon: '../assets/icons/prisma.svg'
+    - name: GraphQL
+      icon: '../assets/icons/graphql.svg'
+    - name: PostgreSQL
+      icon: '../assets/icons/postgresql.svg'
+    - name: Git
+      icon: '../assets/icons/git.svg'
+    - name: GitHub
+      icon: '../assets/icons/github.svg'
+    - name: GitLab
+      icon: '../assets/icons/gitlab.svg'
+    - name: Jira
+      icon: '../assets/icons/jira.svg'
+    - name: Confluence
+      icon: '../assets/icons/confluence.svg'
+    - name: Figma
+      icon: '../assets/icons/figma.svg'
