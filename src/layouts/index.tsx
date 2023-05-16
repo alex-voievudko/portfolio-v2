@@ -3,7 +3,7 @@ import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import { stagger } from '@animations'
-import { Header, Overlay, ScrollToTop } from '@components'
+import { Header, Overlay, ScrollToTop, Loader } from '@components'
 import { ThemeProvider } from '@theme'
 
 type LayoutProps = {
@@ -21,6 +21,7 @@ export const Layout = ({ children }: LayoutProps) => {
         </motion.div>
       </AnimatePresence>
       <Overlay />
+      <Loader />
     </ThemeProvider>
   )
 }
