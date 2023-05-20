@@ -31,6 +31,15 @@ export const Background = styled(GatsbyImage)`
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
+
+  img {
+    object-fit: cover !important;
+    object-position: top right !important;
+
+    @media ${({ theme }) => theme.breakpoints.lg} {
+      object-position: top center !important;
+    }
+  }
 `
 
 export const Content = styled.div`

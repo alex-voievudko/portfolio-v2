@@ -69,7 +69,7 @@ export const HeroSection = () => {
 
   return (
     <S.Section>
-      <S.Background image={backgroundImage} alt="hero-background" />
+      <S.Background image={backgroundImage} alt="hero-background" objectFit="cover" />
       <Container fullHeight>
         <S.Content>
           <S.Title dangerouslySetInnerHTML={{ __html: title }} variants={fadeInUp}></S.Title>
@@ -79,7 +79,7 @@ export const HeroSection = () => {
             <Typed strings={variants} typeSpeed={40} backSpeed={50} loop />
           </S.Subtitle>
           <S.ButtonsWrapper variants={fadeInUp}>
-            <Button as="a" href={buttonCv.url} variant="solid" leftIcon={<FiDownload />}>
+            <Button as="a" href={buttonCv.url} variant="solid" leftIcon={<FiDownload />} download>
               {buttonCv.label}
             </Button>
 
