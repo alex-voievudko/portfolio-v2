@@ -11,6 +11,7 @@ type Props = {
   variant?: 'solid' | 'outline' | 'text'
   type?: 'button' | 'submit' | 'reset'
   disabled?: boolean
+  download?: boolean
   isCardButton?: boolean
   rightIcon?: JSX.Element
   leftIcon?: JSX.Element
@@ -30,6 +31,7 @@ export const Button = ({
   isCardButton,
   disabled,
   type,
+  download,
 }: Props) => {
   return (
     <S.Button
@@ -39,6 +41,7 @@ export const Button = ({
       $isCardButton={isCardButton}
       disabled={disabled}
       onClick={onClick}
+      {...(download && { download })}
       {...(type && { type })}
       {...(as === 'a' && { target: '_blank', rel: 'noopener noreferrer' })}
     >

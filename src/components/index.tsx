@@ -1,4 +1,5 @@
 export * from './Button/Button'
+export * from './Chip/Chip'
 export * from './Contacts/Contacts'
 export * from './Container/Container'
 export * from './ExperienceItem/ExperienceItem'
