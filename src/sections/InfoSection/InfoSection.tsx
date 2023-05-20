@@ -123,7 +123,7 @@ export const InfoSection = () => {
             </S.ContactInfo>
             <S.ActionsWrapper>
               <S.ButtonWrapper>
-                <Button variant="solid" href={button.url} leftIcon={<FiDownload />}>
+                <Button variant="solid" href={button.url} leftIcon={<FiDownload />} download>
                   {button.label}
                 </Button>
               </S.ButtonWrapper>
