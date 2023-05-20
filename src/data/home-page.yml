@@ -9,20 +9,21 @@ hero_section:
     - a software engineer
     - a web developer
     - a lover of all things tech
-  background_image: ../assets/images/hero-image.jpeg
+  background_image: ../assets/images/hero-image.jpg
   buttons:
     - label: Download CV
-      url: /contact
+      url: /Oleksandr-Voievudko-CV.pdf
     - label: Visit Github
-      url: /projects
+      url: https://github.com/alex-voievudko
   social_links:
     - label: github
       url: https://github.com/alex-voievudko
     - label: linkedin
       url: https://www.linkedin.com/in/alex-voievudko/
-    - label: instagram
-      url: https://www.instagram.com/alex_voievudko/
     - label: telegram
       url: https://t.me/alex_voievudko
+    - label: instagram
+      url: https://www.instagram.com/alex.voievudko/
+   
 
 

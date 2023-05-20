@@ -4,38 +4,91 @@ title: Portfolio
 description: This is the portfolio page of the portfolio. It is a static page that is generated from a YAML file.
 projects_section:
   projects:
-    - title: World of Games
-      description: The app lets you view popular games and developers, using Firebase authentication for easy registration and login and the RAWG API for fetching game and developer data. Stay on top of the latest gaming trends with this convenient and intuitive tool. Try it out today!
+    - title: Portfolio V2
+      description: Introducing my Portfolio V2, a captivating project showcasing my latest developments. With enhanced features and a sleek design, this portfolio demonstrates my expertise in creating immersive user experiences and innovative solutions. Explore my work and discover the power of my skills in this engaging showcase.
+      release_date: 2023-05-20
       technologies:
-        - React
-        - TypeScript
-        - Redux
-        - Styled Components
-      video: ../assets/video/project-1.mp4
+        - label: React
+          icon: '../assets/icons/react.svg'
+        - label: TypeScript
+          icon: '../assets/icons/typescript.svg'
+        - label: Gatsby
+          icon: '../assets/icons/gatsby.svg'
+        - label: GraphQL
+          icon: '../assets/icons/graphql.svg'
+        - label: styled-components
+          icon: '../assets/icons/styledcomponents.svg'
+      video: ../assets/video/portfolio-v2.webm
+      github: https://github.com/alex-voievudko/portfolio-v2
+      live: https://alex.voievudko.com
+
+    - title: ZeptoLab Careers
+      description: Introducing careers.zeptolab.com, a dynamic portfolio project highlighting Zeptolab's talented teams and diverse job opportunities. This user-friendly website showcases the company's vibrant work culture, providing aspiring professionals with detailed job descriptions and easy navigation to find their dream job.
+      release_date: 2023-04-30
+      technologies:
+        - label: React
+          icon: '../assets/icons/react.svg'
+        - label: TypeScript
+          icon: '../assets/icons/typescript.svg'
+        - label: Gatsby
+          icon: '../assets/icons/gatsby.svg'
+        - label: GraphQL
+          icon: '../assets/icons/graphql.svg'
+        - label: styled-components
+          icon: '../assets/icons/styledcomponents.svg'
+      video: ../assets/video/careers.webm
+      github: null
+      live: https://careers.zeptolab.com
+
+    - title: Portfolio V1
+      release_date: 2022-08-23
+      description: Introducing my Old Portfolio, a project I built when I was starting my journey as a developer. This early showcase reflects my initial foray into creating engaging web experiences, showcasing my progress and passion for the craft. Explore the beginnings of my work and witness the growth of my skills and creativity over time.
+      technologies:
+        - label: React
+          icon: '../assets/icons/react.svg'
+        - label: JavaScript
+          icon: '../assets/icons/javascript.svg'
+        - label: Redux
+          icon: '../assets/icons/redux.svg'
+        - label: Tailwind CSS
+          icon: '../assets/icons/tailwindcss.svg'
+      video: ../assets/video/portfolio-v1.webm
+      github: https://github.com/alex-voievudko/portfolio
+      live: https://alex-voievudko.github.io/portfolio/
+
+    - title: World of Games
+      release_date: 2022-08-20
+      description: Introducing World of Games, a captivating portfolio project I created with user registration/login functionality and a powerful RAWG API-powered dashboard.
+      technologies:
+        - label: React
+          icon: '../assets/icons/react.svg'
+        - label: JavaScript
+          icon: '../assets/icons/javascript.svg'
+        - label: Redux
+          icon: '../assets/icons/redux.svg'
+        - label: Material UI
+          icon: '../assets/icons/materialui.svg'
+      video: ../assets/video/world-of-games.webm
       github: https://github.com/alex-voievudko/world-of-games-app
       live: https://630373690c37ff00a8b2348c--world-of-games.netlify.app/
 
-    - title: Budget App
-      description: This is a budget app that lets you create custom categories and track your expenses with ease. With its simple and intuitive design, managing your finances has never been simpler. Start taking control of your money today.
+    - title: Simple Budget App
+      description: Introducing my Simple Budget App, a user-friendly portfolio project designed to help individuals track expenses, set budgets, and achieve better financial control. With its intuitive interface and powerful features, managing your finances has never been easier.
+      release_date: 2022-08-09
       technologies:
-        - React
-        - TypeScript
-        - Redux
-        - Styled Components
-      video: ../assets/video/project-1.mp4
+        - label: React
+          icon: '../assets/icons/react.svg'
+        - label: JavaScript
+          icon: '../assets/icons/javascript.svg'
+        - label: Chakra UI
+          icon: '../assets/icons/chakraui.svg'
+      video: ../assets/video/budget-app.webm
       github: https://github.com/alex-voievudko/budget-app
       live: https://alex-voievudko.github.io/budget-app/
 
-    - title: ZeptoLab Careers
-      description: This is the description of the project 3.
-      technologies:
-        - React
-        - TypeScript
-        - Redux
-        - Styled Components
-      video: ../assets/video/project-1.mp4
-      github: null
-      live: https://careers.zeptolab.com/
+   
+
+    
       
       
 
