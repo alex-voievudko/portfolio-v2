@@ -38,7 +38,7 @@ export const Video = ({ source }: Props) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <source src={source} type="video/mp4" />
+        <source src={source} type="video/webm" />
       </video>
     </S.Container>
   )
