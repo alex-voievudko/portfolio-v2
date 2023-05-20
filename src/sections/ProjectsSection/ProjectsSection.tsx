@@ -16,7 +16,15 @@ type Data = {
           projects: {
             title: string
             description: string
-            technologies: string[]
+            release_date: string
+            technologies: {
+              label: string
+              icon: {
+                svg: {
+                  dataURI: string
+                }
+              }
+            }[]
             live: string
             github: string
             video: {
@@ -41,7 +49,15 @@ export const ProjectsSection = () => {
               projects {
                 title
                 description
-                technologies
+                release_date
+                technologies {
+                  label
+                  icon {
+                    svg {
+                      dataURI
+                    }
+                  }
+                }
                 live
                 github
                 video {
