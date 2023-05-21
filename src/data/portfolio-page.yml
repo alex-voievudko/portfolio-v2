@@ -18,7 +18,7 @@ projects_section:
           icon: '../assets/icons/graphql.svg'
         - label: styled-components
           icon: '../assets/icons/styledcomponents.svg'
-      video: ../assets/video/portfolio-v2.webm
+      video: ../assets/video/portfolio-v2.mp4
       github: https://github.com/alex-voievudko/portfolio-v2
       live: https://alex.voievudko.com
 
@@ -36,7 +36,7 @@ projects_section:
           icon: '../assets/icons/graphql.svg'
         - label: styled-components
           icon: '../assets/icons/styledcomponents.svg'
-      video: ../assets/video/careers.webm
+      video: ../assets/video/careers.mp4
       github: null
       live: https://careers.zeptolab.com
 
@@ -52,7 +52,7 @@ projects_section:
           icon: '../assets/icons/redux.svg'
         - label: Tailwind CSS
           icon: '../assets/icons/tailwindcss.svg'
-      video: ../assets/video/portfolio-v1.webm
+      video: ../assets/video/portfolio-v1.mp4
       github: https://github.com/alex-voievudko/portfolio
       live: https://alex-voievudko.github.io/portfolio/
 
@@ -68,7 +68,7 @@ projects_section:
           icon: '../assets/icons/redux.svg'
         - label: Material UI
           icon: '../assets/icons/materialui.svg'
-      video: ../assets/video/world-of-games.webm
+      video: ../assets/video/world-of-games.mp4
       github: https://github.com/alex-voievudko/world-of-games-app
       live: https://630373690c37ff00a8b2348c--world-of-games.netlify.app/
 
@@ -82,7 +82,7 @@ projects_section:
           icon: '../assets/icons/javascript.svg'
         - label: Chakra UI
           icon: '../assets/icons/chakraui.svg'
-      video: ../assets/video/budget-app.webm
+      video: ../assets/video/budget-app.mp4
       github: https://github.com/alex-voievudko/budget-app
       live: https://alex-voievudko.github.io/budget-app/
 
