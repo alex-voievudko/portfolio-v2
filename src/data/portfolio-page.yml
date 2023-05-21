@@ -20,7 +20,7 @@ projects_section:
           icon: '../assets/icons/styledcomponents.svg'
       video: ../assets/video/portfolio-v2.mp4
       github: https://github.com/alex-voievudko/portfolio-v2
-      live: https://alex.voievudko.com
+      live: https://alexvoievudko.com
 
     - title: ZeptoLab Careers
       description: Introducing careers.zeptolab.com, a dynamic portfolio project highlighting Zeptolab's talented teams and diverse job opportunities. This user-friendly website showcases the company's vibrant work culture, providing aspiring professionals with detailed job descriptions and easy navigation to find their dream job.
